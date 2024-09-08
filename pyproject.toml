@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "universal_constructor"
+version = "0.1.0"
+description = "universal_constructor using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.51.0" }
+
+[tool.poetry.scripts]
+universal_constructor = "universal_constructor.main:run"
+run_crew = "universal_constructor.main:run"
+train = "universal_constructor.main:train"
+replay = "universal_constructor.main:replay"
+test = "universal_constructor.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

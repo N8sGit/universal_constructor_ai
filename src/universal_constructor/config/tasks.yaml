@@ -1,0 +1,39 @@
+retrieve_blueprint_task:
+  description: >
+    Retrieve the construction blueprint/design specs from the designated blueprint storage.
+    Ensure that the blueprint is accurate and reflects the necessary instructions for the current job.
+  expected_output: >
+    A blueprint (instruction tape) in the form of a list or structured data representing the machine's construction plan or program's serialized schema.
+  agent: instruction_tape_agent
+
+duplicate_blueprint_task:
+  description: >
+    Make an exact duplicate of the blueprint (instruction tape) that will be used for the construction of a new machine or Universal Constructor.
+    Ensure that the duplicated blueprint is error-free and matches the original perfectly. 
+  expected_output: >
+    A duplicate blueprint that can be sent to the control_unit_agent and output_agent.
+  agent: duplicator_agent
+
+build_machine_task:
+  description: >
+    Use the blueprint and raw materials to assemble the machine according to the specified instructions.
+    Ensure that the construction process is precise and efficient, resulting in a fully functional machine.
+  expected_output: >
+    A completed machine or Universal Constructor, assembled according to the blueprint.
+  agent: manipulator_agent
+
+gather_materials_task:
+  description: >
+    Gather the necessary raw materials from the material depot or environment. This environment can be an API, library, or codebase.
+    Ensure that the materials are in the right quantities and quality to meet the needs of the current construction project. Assemble a list of dependencies for the code project.
+  expected_output: >
+    All required raw materials/specs delivered to the manipulator_agent for the construction process/development.
+  agent: resource_handler_agent
+
+deploy_machine_task:
+  description: >
+    Once the machine has been constructed/program developed, ensure that it is deployed or stored properly.
+    Verify that the machine is fully functional and ready for operation before finalizing the deployment.
+  expected_output: >
+    A deployed machine or Universal Constructor, complete with a copied instruction tape if it is a replica. With all files written to a folder in src/universal_constructor_agent/constructor_outputs.
+  agent: output_agent
