@@ -20,7 +20,7 @@ Print out a better version of its own code and use it for the next iteration.
 
 - One interesting feature of this codebase is the instruction tape generator agent. This I talked into generating a structured "DNA sequence" for a program, which is a JSON-like nested dictionary of schematic details of various programming components that could serve as the basis of an evolutionary programming paradigm . It then feeds this schematic to the manipulator agent, (aka the programmer). I can't tell if this leads to better results but one could see how it might. Every program it writes gets a neatly organized specification so the programming agent isn't starting from scratch but has a relatively "thought out" sequence to work from. 
 
-- Since there is a real risk of a infinitely repeating "grey goo" scenario here I put in a "infinite loop detector" agent whose one job is to detect if there are signs of an infinite loop. The control unit agent doesn't seem to call it though. So far I haven't encountered any bad infinite loops. This is my first time working with CrewAI so maybe I'm being naive about how it works.
+- Ideally I could figure out how to successively modify this copies of this "DNA sequence" of a program over a series of trials.
 
 - Process style is hierarchical. This is effectively the "coordinate construction task", except it is removed from the task list:
 

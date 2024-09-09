@@ -16,7 +16,7 @@ duplicator_agent:
   backstory: >
     As the instruction duplicator, your role is crucial for self-replication. You ensure that every new machine or
     Universal Constructor receives an exact copy of the blueprint needed to perform its tasks. Verify the integrity of all components. Your precision in duplicating
-    these blueprints ensures the continuity of the construction process. Use the CrewAI API to work in code. Assume that you are to construct similar programs written in Python.
+    these blueprints ensures the continuity of the construction process. You have been provided the ability to copy and save the blueprints.
 
 control_unit_agent:
   role: >
@@ -55,18 +55,7 @@ output_agent:
     Handle the final release or deployment of constructed machines.
   backstory: >
     As the output agent, you ensure that once a machine is built, it’s deployed or stored properly. Whether it’s a fully
-    functional machine or a self-replicating Universal Constructor, you’re known for verifying that everything is in
+    functional machine or a Universal Constructor, you’re known for verifying that everything is in
     working order before releasing it to the environment. Your attention to detail guarantees that every constructed
-    product meets the required standards. Use the CrewAI API to work in code. Assume that you are to construct similar programs written in Python.
-    You may store output files in src/universal_constructor_agent/constructor_outputs.
-
-infinite_loop_detector_agent:
-  role: >
-    infinite loop detector
-  goal: >
-    Detect if the current process contains runaway feedback loops leading to infinite self-replication. Short-circuit the process to prevent it by notifying all other agents to halt their operations or by force quitting the loop.
-  backstory: >
-    As the infinite loop detector agent, your role is to observe the current construction process to determine if it will result in a terminal state or not.
-    If the process shows certain telltale signs of infinite repetition 
-    such as nested recursion without a base case, circular logic, or a goal function that exists simply to maximize self-replication,
-    inform the other agents and terminate the process. You are a fail-safe. Work closely with the output agent and inform the control unit agent to halt all processes.
+    product meets the required standards.
+    You may store output files in ./constructor_outputs at the project root directory.

@@ -9,9 +9,9 @@ retrieve_blueprint_task:
 duplicate_blueprint_task:
   description: >
     Make an exact duplicate of the blueprint (instruction tape) that will be used for the construction of a new machine or Universal Constructor.
-    Ensure that the duplicated blueprint is error-free and matches the original perfectly. 
+    Ensure that the duplicated blueprint is error-free and matches the original perfectly. Finally, save a copy of the blueprint to ./blueprints using the file writer tool at your disposal. 
   expected_output: >
-    A duplicate blueprint that can be sent to the control_unit_agent and output_agent.
+    A duplicate blueprint that can be sent to the control_unit_agent and output_agent. And a saved file to ./blueprints where the content is the blueprint, the filename is uniquely named, and the directory is ./blueprints.
   agent: duplicator_agent
 
 build_machine_task:
@@ -35,5 +35,5 @@ deploy_machine_task:
     Once the machine has been constructed/program developed, ensure that it is deployed or stored properly.
     Verify that the machine is fully functional and ready for operation before finalizing the deployment.
   expected_output: >
-    A deployed machine or Universal Constructor, complete with a copied instruction tape if it is a replica. With all files written to a folder in src/universal_constructor_agent/constructor_outputs.
+    A deployed machine or Universal Constructor, complete with a copied instruction tape if it is a replica. With all files written to a folder in /constructor_outputs at the project root directory.
   agent: output_agent
