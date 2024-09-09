@@ -34,7 +34,7 @@ coordinate_construction_task:
   agent: control_unit_agent
   ```
 
-- Resource collector agent doesn't have much of a use in a digital context. UC's were initially meant to work for physical materials and there's no digital analogue to material collection. I want to keep the same spirit of von Neumann's original vision even if much of it is impractical for a code generator (and notoriously unperformant)
+- At first I thought resource collector agent wouldn't have much of a use in a digital context. UC's were initially meant to work for physical materials and there's no digital analogue to material collection. I want to keep the same spirit of von Neumann's original vision even if much of it is impractical for a code generator (and notoriously unperformant). But to my suprise it was basically a QA agent, collecting libraries to provide to the manipulator agent (the programmer) and in one instance finding a securer alternative to the exploitable eval() method for a calculator app. 
 
 ## Installation
 
